@@ -14,16 +14,19 @@ xbmcgit:
 			
 xbmcinstall:
 			chmod a+x ./xbmc/install/install-xbmc.sh			
-			./xbmc/install/install-xbmc.sh
+			cd xbmc/install &&\
+			./install-xbmc.sh
 			
 			chmod a+x ./start-xbmc.sh
 			chmod a+x ./create_tar.sh
 			
 xbmcpatch:
 			chmod a+x ./xbmc/install/install-patch.sh
-			./xbmc/install/install-patch.sh
+			cd xbmc/install &&\
+			./install-patch.sh
 
 lubuntu:	
 			chmod a+x ./xbmc/install/install-patch-lubuntu.sh
-			./xbmc/install/install-patch-lubuntu.sh
+			cd xbmc/install &&\
+			./install-patch-lubuntu.sh
 

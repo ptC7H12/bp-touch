@@ -22,8 +22,14 @@ xbmcinstall:
 			
 xbmcpatch:
 			chmod a+x ./xbmc/install/install-patch.sh
+			chmod a+x ./xbmc/install/remove-files.sh
 			cd xbmc/install &&\
 			./install-patch.sh
+			cd xbmc &&\
+			./patch.sh
+			cd xbmc/install &&\
+			./remove-files.sh
+			
 
 lubuntu:	
 			chmod a+x ./xbmc/install/install-patch-lubuntu.sh

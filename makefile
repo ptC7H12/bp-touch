@@ -1,5 +1,3 @@
-XBMCGIT=https://github.com/ptC7H12/xbmc.git
-XBMCBRANCH=Gotham-A10
 
 all:		dep xbmcgit xbmcpatch xbmcinstall
 
@@ -7,10 +5,9 @@ dep:
 			chmod a+x ./install-dep.sh
 			./install-dep.sh
 			
-xbmcgit:
-			git clone $(XBMCGIT)
-			cd xbmc &&\ 
-			git checkout $(XBMCBRANCH)
+xbmcgit:		
+			chmod a+x ./install-git.sh
+			./install-git.sh 
 			
 xbmcinstall:
 			chmod a+x ./xbmc/install/install-xbmc.sh			
@@ -22,14 +19,9 @@ xbmcinstall:
 			
 xbmcpatch:
 			chmod a+x ./xbmc/install/install-patch.sh
-			chmod a+x ./xbmc/install/remove-files.sh
 			cd xbmc/install &&\
 			./install-patch.sh
-			cd xbmc &&\
-			./patch.sh
-			cd xbmc/install &&\
-			./remove-files.sh
-			
+					
 
 lubuntu:	
 			chmod a+x ./xbmc/install/install-patch-lubuntu.sh

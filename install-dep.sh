@@ -15,4 +15,11 @@ if [ -f /swap ]
 		
 fi
 
-swapon /swap
+if grep "/swap" /proc/swaps; then
+	#echo "$?"
+	echo "Swapfile is allready mounted"
+else
+	#echo "$?"
+	echo "No swapfile found"
+	swapon /swap
+fi

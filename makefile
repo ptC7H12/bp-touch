@@ -23,8 +23,8 @@ xbmcpatch:
 			./install-patch.sh
 					
 
-lubuntu:	
+lubuntu:		dep xbmcgit xbmcpatch
 			chmod a+x ./xbmc/install/install-patch-lubuntu.sh
 			cd xbmc/install &&\
 			./install-patch-lubuntu.sh
-
+			xbmcinstall

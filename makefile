@@ -9,11 +9,11 @@ dep:
 			
 xbmcgit:
 			git clone $(XBMCGIT)
-			cd ./xbmc\ 
-			checkout $(XBMCBRANCH)
+			cd xbmc\ 
+			git checkout $(XBMCBRANCH)
 			
 xbmcinstall:
-			cd ./xbmc/install\
+			cd xbmc/install\
 			chmod a+x ./install-xbmc.sh\			
 			./install-xbmc.sh
 			
@@ -21,11 +21,11 @@ xbmcinstall:
 			chmod a+x ./create_tar.sh
 			
 xbmcpatch:
-			cd ./xbmc/install\
+			cd xbmc/install\
 			chmod a+x ./install-patch.sh\
 			./install-patch.sh
 
-lubuntu:	cd ./xbmc/install\
+lubuntu:	cd xbmc/install\
 			chmod a+x ./install-patch-lubuntu.sh\
 			./install-patch-lubuntu.sh
 

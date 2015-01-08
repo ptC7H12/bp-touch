@@ -21,9 +21,8 @@ xbmcinstall:
 			chmod a+x ./create_tar.sh
 			
 xbmcpatch:
-			cd xbmc/install\
-			chmod a+x ./install-patch.sh\
-			./install-patch.sh
+			chmod a+x ./xbmc/install/install-patch.sh
+			./xbmc/install/install-patch.sh
 
 lubuntu:	cd xbmc/install\
 			chmod a+x ./install-patch-lubuntu.sh\

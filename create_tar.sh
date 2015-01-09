@@ -1,3 +1,6 @@
 #!/bin/bash
 
-./xbmc/tools/a10/depends/make -C package tarball
+SRC=$(pwd)
+
+cd $SRC/xbmc/tools/a10/depends
+make -C package tarball

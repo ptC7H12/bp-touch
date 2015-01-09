@@ -12,5 +12,7 @@ if [ -f /swap ]
 	else
 		dd if=/dev/zero of=/swap bs=1M count=384
 		mkswap -c /swap
-		swapon /swap
+		
 fi
+
+swapon /swap
